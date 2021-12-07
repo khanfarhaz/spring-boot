@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+    <p>The getAllResponseHeaders() function returns all the header
+        information</p>
+
+ 
+
+    <p id="demo"></p>
+
+ 
+
+    <script>
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+            document.getElementById("demo").innerHTML = this.getAllResponseHeaders();
+        }
+        xhttp.open("GET", "http://localhost:1111/hello");
+        xhttp.send();
+    </script>
+
+ 
+
+
+    <!--     <script>
+        var req = new XMLHttpRequest();
+        req.open('GET', document.location, false);
+        req.send(null);
+        var headers = req.getAllResponseHeaders().toLowerCase();
+        alert(headers);
+    </script>
+     -->
+</body>
+
+ 
+
+
+</html>
